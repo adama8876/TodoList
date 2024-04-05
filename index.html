@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="body_page">
+        <section>
+            <div class="container">
+                <h2>TASK MANAGER</h2>
+                <div class="form_bouton">
+                    <input type="text" placeholder="veuillez décrire votre tache" id="champ_formulaire" required>
+                    <input type="datetime-local" placeholder="Indiquer la date" id="date" required>
+                    <input type="text" placeholder="Indiquer la priorité" id="priorite" required>
+                    <input type="text" placeholder="Décrire le status" id="status" required>
+                </div>
+                <button class="bouton_déclencheur" id="addbtn">+</button>
+                <ul id="addList"></ul>
+
+            </div>
+        </section>
+   </div>
+    <script src="main.js"></script>
+</body>
+</html>
