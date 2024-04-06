@@ -13,15 +13,32 @@
                 <h2>TASK MANAGER</h2>
                 <div class="form_bouton">
                     <input type="text" placeholder="veuillez décrire votre tache" id="champ_formulaire" required>
-                    <input type="datetime-local" placeholder="Indiquer la date" id="date" required>
-                    <input type="text" placeholder="Indiquer la priorité" id="priorite" required>
-                    <input type="text" placeholder="Décrire le status" id="status" required>
+                    <input type="date" placeholder="Indiquer la date" id="date" required>
+                    <select id="priorite">
+                        <option value="" disabled selected hidden>Sélectionnez une priorité</option>
+                        <option value="Haute">Haute</option>
+                        <option value="Moyenne">Moyenne</option>
+                        <option value="Basse">Basse</option>
+                        <!-- Ajoutez d'autres options au besoin -->
+                    </select>
                 </div>
                 <button class="bouton_déclencheur" id="addbtn">+</button>
                 <ul id="addList"></ul>
-
+                <p id="completedTasksCount">Nombre de tâches complètes : 0</p>
             </div>
         </section>
+   </div>
+   <div class="tableau">
+    <table>
+        <thead>
+            <tr>
+                <th>Description de la tâche</th>
+                <th>Date</th>
+                <th>priorité</th>
+                <th>status</th>
+            </tr>
+        </thead>
+    </table>
    </div>
     <script src="main.js"></script>
 </body>
