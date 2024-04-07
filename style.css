@@ -18,6 +18,8 @@
 body{
     background-color: #ecc19c;
     display: flex;
+    flex-direction: column;
+    font-family: 'poppins';
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -29,13 +31,19 @@ ul{
 }
 ul li{
     margin-top: 10px;
+    /* display: flex; */
     justify-content: space-between;
-    display: flex;
     font-family: poppins;
     background-color: rgb(9, 28, 68);
     align-items: center;
     padding: 10px;
     border-radius: 5px;
+    overflow: hidden;
+
+}
+span {
+    margin-left: 30px;
+    margin-right: 30px;
 }
 ul li button{
     padding: 5px;
@@ -54,6 +62,7 @@ ul li span{
     padding: 10px;
     box-shadow: 0 0 10px 5px;
     border-radius: 10px;
+    margin: 40px auto;
 }
 h2{
     text-align: center;
@@ -65,7 +74,7 @@ h2{
 .form_bouton{
     /* display: flex; */
 }
-.form_bouton input{
+.form_bouton input, select{
     width: 90%;
     height: 40px;
     margin-bottom: 10px;
@@ -82,4 +91,85 @@ h2{
     border-radius: 0 10px 10px 0;
     border: 0;
     background-color: rgb(202, 72, 78);
+}
+/* test sur le tableau */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    /* min-width: 600px; */
+    margin: auto;
+}
+th,td{
+    padding: 10px;
+    border: 2px solid #ddd;
+    text-align: center;
+}
+th{
+    background-color: antiquewhite;
+    border: 2px solid black;
+}
+.tableau{
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+td{
+    background-color: white;
+    font-size: 20x;
+    color: rgb(44, 9, 24);
+    font-weight: bold;
+}
+.deleteBtn{
+    background-color: rgb(136, 33, 38);
+    color: white;
+    font-weight:600;
+    border: none;
+    font-size: 16px;
+}
+.new-row {
+    animation: slide-in 0.7s ease-out;
+}
+.status{
+    text-decoration: line-through;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Ajoutez les règles CSS pour les appareils de petite taille (par exemple, les smartphones) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* Ajustez la largeur du conteneur pour s'adapter aux petits écrans */
+        align-items: center;
+    }
+    .form_bouton input,
+    select {
+        width: 100%; /* Les champs de formulaire occupera toute la largeur de mon container */
+    }
+    .form_bouton {
+        flex-direction: column; /
+    }
+    .bouton_déclencheur {
+        width: 100%; /* La largeur du bouton occupera toute la largeur de mon container */
+        border-radius: 0; /* Supprimez le bord arrondi*/
+    }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 70%; /* Ajustez la largeur du conteneur pour les tablettes */
+    }
+}
+@media only screen and (min-width: 1025px) {
+    .container {
+        width: 600px; 
+    }
+    
+}
 }
