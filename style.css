@@ -1,20 +1,16 @@
+/* N'ayant pas la police que je veux et la propriété import ne marchait, j'ai dû utilisé cette methode pour ajouter le font poppins */
 @font-face {
     font-family: 'poppins';
     src: url('Poppins/Poppins-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;}
+    /* Ces propriétés s'appliqueront à touts les éléments de la page quelque soit leurs types */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* body{
-    background-color: orangered;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-} */
+/* Ces propriétés s'appliquent au corps de la page */
 body{
     background-color: #ecc19c;
     display: flex;
@@ -24,38 +20,7 @@ body{
     justify-content: center;
     min-height: 100vh;
 }
-/* Cette partie concerne la balise ul */
-ul{
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-ul li{
-    margin-top: 10px;
-    /* display: flex; */
-    justify-content: space-between;
-    font-family: poppins;
-    background-color: rgb(9, 28, 68);
-    align-items: center;
-    padding: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-
-}
-span {
-    margin-left: 30px;
-    margin-right: 30px;
-}
-ul li button{
-    padding: 5px;
-    background-color: rgb(255, 251, 251);
-    color: black;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-ul li span{
-    color: white;
-}
+/* Propriétés appliquées au containeur qui n'emglobe que les éléments du formulaire */
 .container{
     width: 600px;
     background-color: antiquewhite;
@@ -132,6 +97,7 @@ td{
 .status{
     text-decoration: line-through;
 }
+/* Petite animation que j'ai appliqué à la ligne du tableau qui apparait lorsque je clique sur le bouton ajouter une tâche */
 
 @keyframes slide-in {
     from {

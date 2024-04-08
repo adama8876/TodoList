@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
             const newRow = tableau.insertRow(-1); // -1 pour insérer à la fin
             newRow.classList.add("new-row");
 
-            // Créer les cellules de données (td) et les ajouter à la ligne
+            // Créer les cellules (td) et les ajouter à la ligne du tableau
             const cell1 = newRow.insertCell(0);
             cell1.textContent = addContent;
             
